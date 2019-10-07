@@ -1,0 +1,15 @@
+{
+  "name": "jsonserver",
+  "version": "1.0.0",
+  "description": "Mock REST API server",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch bill_db.json",
+    "json:server:remote": "json-server http://jsonplaceholder.typicode.com/db"
+  },
+  "author": "Sundeep Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  }
+}

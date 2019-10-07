@@ -1,6 +1,6 @@
-# Asset Inventory
+# Split the bill
 
-Sample experimental features of asset inventory app:
+Sample experimental features of Split the bill app:
 
 1. It can fetch asset list dynamically from db and show on page.
 2. It shows individual interfaces list w.r.t devices.
