@@ -1,0 +1,34 @@
+<section>
+    <h2>Add New Person</h2>
+    <form class="form-inline" [formGroup]="addUserForm">
+        <div class="form-group mr-2 mb-2">
+            <label for="name" class="mr-2">Person Name</label>
+            <div id="name" class="value-container">
+                <input type="text" placeholder="Ex: John" formControlName="name" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && formFields.name.errors }" />
+                <div *ngIf="submitted && formFields.name.errors" class="invalid-feedback">
+                    <div *ngIf="formFields.name.errors.required">Person Name is required</div>
+                </div>
+            </div>
+
+            <!-- <input type="text" class="form-control" id="name" placeholder="Ex: John"> -->
+        </div>
+        <button type="button" (click)="addUser(addUserForm.value)" class="btn btn-primary mb-2">Add</button>
+
+    </form>
+</section>
+<hr />
+<section *ngFor="let user of all_users">
+    <div class="media">
+        <div class="media-left">
+            <a>
+                <img class="media-object img-circle" width="30"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Name">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading my-0">{{user.name}}</h4>
+        </div>
+    </div>
+    <hr />
+</section>

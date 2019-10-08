@@ -1,0 +1,101 @@
+//Base Grey Color
+$color-master: #626262 !default;
+$primary:       #65CF48 !default;//$blue !default;
+
+// Lighter Grey colors
+//$color-master-light:mix($color-master, #fff, 16%) !default;
+$color-master-light:mix($color-master, #fff, 25%) !default;
+$color-master-lighter:mix($color-master, #fff, 9.5%) !default;
+$color-master-lightest:mix($color-master, #fff, 3%) !default;
+
+// Darker Grey colors
+$color-master-dark:mix($color-master, #000, 45%) !default;
+$color-master-darker:mix($color-master, #000, 27%) !default;
+$color-master-darkest:mix($color-master, #000, 18%) !default;
+
+$color-white: #fff !default;
+$color-black: #000 !default;
+
+$color-success: #55ff6b !default;
+$color-complete : #48b0f7 !default;
+$color-primary: #6d5cae !default;
+$color-warning: #f8d053 !default;
+$color-danger: #f55753 !default;
+$color-info: #3b4752 !default;
+
+$body-bg: $color-white;
+//$font-family-base: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-size-base: .8125rem;
+$body-color: #7a8994;
+
+
+// z-index scale 
+$zIndex-1:   100;
+$zIndex-2:   200;
+$zIndex-3:   300;
+$zIndex-4:   400;
+$zIndex-5:   500;
+$zIndex-6:   600;
+$zIndex-7:   700;
+$zIndex-8:   800;
+$zIndex-9:   900;
+$zIndex-10: 1000;
+
+$base-img-url: "/assets/images";
+$assets-url: "../../assets";
+
+$color-white: #fff ;
+$color-black: #000 ;
+
+$color-success: #10cfbd ;
+$color-complete : #48b0f7 ;
+$color-primary: #6d5cae ;
+$color-warning: #f8d053 ;
+$color-danger: #f55753 ;
+$color-info: #3b4752 ;
+
+$base-font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Droid Sans", "Helvetica Neue",sans-serif;
+
+//Mixing Color varriable for creating both light and dark colors
+$mix-percentage-dark: 81% ;
+$mix-percentage-darker: 60% ;
+$mix-percentage-light: 80% ;
+$mix-percentage-lighter: 20% ;
+
+//Darker colors
+$color-success-dark: mix($color-success, $color-black, $mix-percentage-dark) ;
+$color-success-darker: mix($color-success, $color-black, $mix-percentage-darker) ;
+
+$color-complete-dark: mix($color-complete, $color-black, $mix-percentage-dark) ;
+$color-complete-darker: mix($color-complete, $color-black, $mix-percentage-darker) ;
+
+$color-primary-dark: mix($color-primary, $color-black, $mix-percentage-dark) ;
+$color-primary-darker: mix($color-primary, $color-black, $mix-percentage-darker) ;
+
+$color-warning-dark: mix($color-warning, $color-black, $mix-percentage-dark) ;
+$color-warning-darker: mix($color-warning, $color-black, $mix-percentage-darker) ;
+
+$color-danger-dark: mix($color-danger, $color-black, $mix-percentage-dark) ;
+$color-danger-darker: mix($color-danger, $color-black, $mix-percentage-darker) ;
+
+$color-info-dark: mix($color-info, $color-black, $mix-percentage-dark) ;
+$color-info-darker: mix($color-info, $color-black, $mix-percentage-darker) ;
+
+//Lighter colors
+$color-success-light: mix($color-success, $color-white, $mix-percentage-light) ;
+$color-success-lighter: mix($color-success, $color-white, $mix-percentage-lighter) ;
+
+$color-complete-light: mix($color-complete, $color-white, $mix-percentage-light) ;
+$color-complete-lighter: mix($color-complete, $color-white, $mix-percentage-lighter) ;
+
+$color-primary-light: mix($color-primary, $color-white, $mix-percentage-light) ;
+$color-primary-lighter: mix($color-primary, $color-white, $mix-percentage-lighter) ;
+
+$color-warning-light: mix($color-warning, $color-white, $mix-percentage-light) ;
+$color-warning-lighter: mix($color-warning, $color-white, $mix-percentage-lighter) ;
+
+$color-danger-light: mix($color-danger, $color-white, $mix-percentage-light) ;
+$color-danger-lighter: mix($color-danger, $color-white, $mix-percentage-lighter) ;
+
+$color-info-light: mix($color-info, $color-white, $mix-percentage-light) ;
+$color-info-lighter: mix($color-info, $color-white, $mix-percentage-lighter) ;

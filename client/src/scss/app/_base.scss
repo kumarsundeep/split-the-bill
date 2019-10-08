@@ -1,0 +1,62 @@
+html{
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+}
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    height: 100%;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-weight: 300;
+    color: #373e43;
+}
+h1 {
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.08px;
+}
+h2 {
+    font-size: 31px;
+    line-height: 40px;
+}
+h3 {
+    font-size: 27px;
+    line-height: 35px;
+}
+h4 {
+    font-size: 22px;
+    line-height: 31.88px;
+}
+h5{
+    font-size: 18px;
+    line-height: 25.88px;
+}
+
+.btn-primary{
+    color: $white;
+}
+
+
+
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+

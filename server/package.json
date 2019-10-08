@@ -4,8 +4,7 @@
   "description": "Mock REST API server",
   "main": "index.js",
   "scripts": {
-    "json:server": "json-server --watch bill_db.json",
-    "json:server:remote": "json-server http://jsonplaceholder.typicode.com/db"
+    "json:server": "json-server --watch bill_db.json"
   },
   "author": "Sundeep Kumar",
   "license": "ISC",
