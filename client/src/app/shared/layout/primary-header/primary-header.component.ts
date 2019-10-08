@@ -10,16 +10,16 @@ import { Subscription } from 'rxjs';
 export class PrimaryHeaderComponent implements OnInit, OnDestroy {
   public page_title: string = "";
   public subscriptions: Subscription[] = [];
-  public uid: any;
-  public cust_company: any;
-  public cust_name: any;
-  public cust_type: any;
+  public navbarOpen: boolean = false;
   constructor(
     private primaryHeaderService: PrimaryHeaderService,
     //private authService: AuthService
   ) { }
   ngOnInit() {
     this.setPageTitle();//Setting up page title    
+  }
+  public toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
   public setPageTitle() {
     this.subscriptions.push(this.primaryHeaderService.pageTitle.subscribe(value => this.page_title = value));

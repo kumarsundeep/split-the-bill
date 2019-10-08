@@ -57,6 +57,12 @@ export class UsersComponent implements OnInit {
           error => {
             // Show Error
             console.log('App service error handler: ' + error);
+          }, () => {
+            this.showUsers();
+            this.addUserForm.reset();
+            Object.keys(this.addUserForm.controls).forEach(key => {
+              this.addUserForm.get(key).setErrors(null);
+            });
           });
       }
 

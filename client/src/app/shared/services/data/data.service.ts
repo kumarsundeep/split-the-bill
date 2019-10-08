@@ -22,7 +22,6 @@ export class DataService {
   }
   addUser(data: any) {
     const url = `people`;
-    alert('url ' + url);
     return this.restService.postService(url, data, this.apiTypes.app);
   }
   // getSampleData(params) {
