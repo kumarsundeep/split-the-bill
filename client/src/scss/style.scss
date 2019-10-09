@@ -52,9 +52,10 @@
 
 //App styles
 @import "app/base";
-@import "app/form"
+@import "app/form";
 
 
 
 /* ############### CUSTOM VENDOR STYLES ############### */
 // Place to import CUSTOM VENDOR STYLES
+@import "ng2-select/ng2-select";

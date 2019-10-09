@@ -17,13 +17,27 @@
       "id": 4
     }
   ],
-  "expenses": {
-    "john": [
-      500,
-      200
-    ],
-    "jane": []
-  },
+  "expenses": [
+    {
+      "name": "rock concert",
+      "paidby": "john",
+      "amount": "500",
+      "oweby": [
+        "jane"
+      ],
+      "id": 1
+    },
+    {
+      "name": "grocery",
+      "paidby": "john",
+      "amount": "200",
+      "oweby": [
+        "jane",
+        "wolowitz"
+      ],
+      "id": 2
+    }
+  ],
   "settleUp": {
     "jane": [
       {

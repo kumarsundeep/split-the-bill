@@ -24,6 +24,14 @@ export class DataService {
     const url = `people`;
     return this.restService.postService(url, data, this.apiTypes.app);
   }
+  getExpenses() {
+    const url = appConfig.appUrl + `expenses`;
+    return this.restService.getService(url, this.apiTypes.app);
+  }
+  addExpense(data: any) {
+    const url = `expenses`;
+    return this.restService.postService(url, data, this.apiTypes.app);
+  }
   // getSampleData(params) {
   //   const url = `/sample/data`;
   //   return this.restService.postService(url, params, this.apiTypes.app);

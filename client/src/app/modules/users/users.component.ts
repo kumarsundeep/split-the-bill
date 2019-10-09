@@ -52,7 +52,7 @@ export class UsersComponent implements OnInit {
       else {
         this.dataService.addUser(params).subscribe(
           resp => {
-            alert(JSON.stringify(resp));
+            this.alertService.openModal('Record added successfully', 'Success')
           },
           error => {
             // Show Error

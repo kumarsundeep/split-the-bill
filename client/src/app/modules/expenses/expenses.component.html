@@ -1,0 +1,100 @@
+<section>
+    <h2>Add New Expense</h2>
+
+    <form class="form" [formGroup]="addExpenseForm">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="name" class="mb-0">Expense Name</label>
+                    <div id="name" class="value-container">
+                        <input type="text" placeholder="Ex: Rock Concert" formControlName="name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && formFields.name.errors }" />
+                        <div *ngIf="submitted && formFields.name.errors" class="invalid-feedback">
+                            <div *ngIf="formFields.name.errors.required">Expense Name is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="amount" class="mb-0">Amount</label>
+                    <div id="amount" class="value-container">
+                        <input type="number" formControlName="amount" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && formFields.amount.errors }" />
+                        <div *ngIf="submitted && formFields.amount.errors" class="invalid-feedback">
+                            <div *ngIf="formFields.amount.errors.required">Amount is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="paidby" class="mb-0">Paid By</label>
+                    <div id="paidby" class="value-container">
+                        <select formControlName="paidby" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && formFields.paidby.errors }">
+                            <option *ngFor="let user of all_users" [value]="user.name">
+                                {{user.name}}</option>
+                        </select>
+                        <div *ngIf="submitted && formFields.paidby.errors" class="invalid-feedback">
+                            <div *ngIf="formFields.paidby.errors.required">Selection is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="oweby" class="mb-0">Owe By</label>
+                    <div id="oweby" class="value-container">
+                        <ng-select class="form-control multi" [multiple]="true" [items]="all_users_name"
+                            (data)="refreshValue($event)" (selected)="selected($event)" (removed)="removed($event)"
+                            placeholder="No person selected" formControlName="oweby">
+                        </ng-select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <button class="btn btn-primary btn-add" (click)="addExpense(addExpenseForm.value)">Add</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </form>
+    <!--
+<div class="form-group mr-2 mb-2">
+                <label for="name" class="mr-2">Person Name</label>
+                <div id="name" class="value-container">
+                    <input type="text" placeholder="Ex: John" formControlName="name" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && formFields.name.errors }" />
+                    <div *ngIf="submitted && formFields.name.errors" class="invalid-feedback">
+                        <div *ngIf="formFields.name.errors.required">Person Name is required</div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" (click)="addUser(addExpenseForm.value)" class="btn btn-primary mb-2">Add</button>
+
+        -->
+
+</section>
+<hr />
+<section *ngFor="let expense of expenses">
+    <div class="media">
+        <div class="media-left">
+            <a>
+                <img class="media-object img-circle" width="30"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Name">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading my-0">{{expense.name}}
+                <span class="amount badge badge-pill badge-info">&#107;&#114; {{expense.amount}}</span>
+            </h4>
+
+        </div>
+    </div>
+    <hr />
+</section>
