@@ -8,7 +8,7 @@ Features of Split the bill app:
 4. Show No. Debts found in the name of Person (User).
 5. It fetches Settle up list statically as no actual DB used in application.
 6. Works for Desktop, Tablet and Mobile.
-7. It uses mobile first approach in UI Design.
+7. It uses mobile first approach in UI Design with Fluent Design.
 8. It uses facade design pattern.
 9. It has global error handling with individual component level error handling.
 10. App is based on modular architecture and lazy load each page.
