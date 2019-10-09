@@ -37,6 +37,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ### Running unit tests in Client
 
+Run `npm run test-headless` to execute the unit tests without browser.
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ### Running end-to-end tests in Client
