@@ -20,7 +20,7 @@
     </form>
 
 </section>
-<hr />
+<hr class="primary-line" />
 <section *ngIf="show_list == true; else showBlock">
     <h3><span class="text-capitalize">{{user_name}}</span> owes debt for:</h3>
     <div *ngIf="no_debt == true; else showPayTo;">
@@ -36,16 +36,13 @@
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading my-0">{{details.to}}
-                        <span class="amount badge badge-pill badge-info">&#107;&#114; {{details.amount}}</span>
+                        <span class="amount badge badge-pill badge-primary">&#107;&#114; {{details.amount}}</span>
                     </h4>
-
                 </div>
             </div>
+            <hr class="primary-line" />
         </div>
     </ng-template>
-
-
-    <hr />
 </section>
 <ng-template #showBlock>
     <h3 class="text-center">No Person selected...</h3>

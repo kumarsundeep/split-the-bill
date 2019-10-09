@@ -3,12 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { LayoutRoutingModule } from './layout-routing.module';
 
-
-
 //components
 import { PrimaryLayoutComponent } from './primary-layout/primary-layout.component';
 import { PrimaryHeaderComponent } from './primary-header/primary-header.component';
-import { PrimaryHeaderService } from './primary-header/primary-header.service';
 
 
 @NgModule({
@@ -20,6 +17,6 @@ import { PrimaryHeaderService } from './primary-header/primary-header.service';
     CommonModule,
     LayoutRoutingModule
   ],
-  providers: [PrimaryHeaderService]
+  providers: []
 })
 export class LayoutModule { }

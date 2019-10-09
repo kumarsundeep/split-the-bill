@@ -37,6 +37,15 @@
         "wolowitz"
       ],
       "id": 2
+    },
+    {
+      "name": "super mart",
+      "paidby": "wolowitz",
+      "amount": 100,
+      "oweby": [
+        "jane"
+      ],
+      "id": 3
     }
   ],
   "settleup": [
@@ -53,6 +62,11 @@
           "to": "john",
           "amount": 350,
           "id": 1
+        },
+        {
+          "to": "wolowitz",
+          "amount": 100,
+          "id": 2
         }
       ]
     },

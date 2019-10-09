@@ -1,0 +1,21 @@
+.form-control{
+    border-radius: 0;
+    border-width: 2px;
+}
+.btn{
+    min-width: 70px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 0;
+    font-size: 14px;
+}
+select{
+    text-transform: capitalize;
+    option:hover{
+        background-color: $primary;
+    }
+}
+.primary-line{
+    border-top: 1px dotted $primary;
+}

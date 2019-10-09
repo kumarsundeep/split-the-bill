@@ -51,6 +51,10 @@ h5{
     font-size: 18px;
     line-height: 25.88px;
 }
+nav{
+    border-bottom: 2px solid $primary;
+    margin-bottom: 25px;
+}
 
 .btn-primary{
     color: $white;

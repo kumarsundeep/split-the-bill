@@ -68,14 +68,14 @@ $input-pad: 5px;
       margin-top: 4px; /* FIXME hardcoded value :-/ */
   }
   .ui-select-container[theme="select2"].direction-up.select2-dropdown-open .ui-select-match {
-      border-bottom-color: #5897fb;
+      border-bottom-color: $primary;
   }
   
   /* Selectize theme */
   
   /* Helper class to show styles when focus */
   .selectize-input.selectize-focus{
-    border-color: #007FBB !important;
+    border-color: $primary !important;
   }
   
   /* Fix input width for Selectize theme */
@@ -213,7 +213,7 @@ $input-pad: 5px;
     right: 100%;
     height: 100%;
     margin-right: 2px;
-    border-left: 1px solid #428bca;
+    border-left: 1px solid $primary;
   }
   
   .ui-select-multiple .ui-select-match-item.dropping-after:after {
@@ -223,7 +223,7 @@ $input-pad: 5px;
     left: 100%;
     height: 100%;
     margin-left: 2px;
-    border-right: 1px solid #428bca;
+    border-right: 1px solid $primary;
   }
   
   .ui-select-bootstrap .ui-select-choices-row>a {
@@ -286,7 +286,12 @@ $input-pad: 5px;
       text-transform: capitalize;
     }
   }
+  .ui-select-choices-row.active > a{
+    background-color: $primary !important;
+    text-transform: capitalize;
+  }
   ng-select.form-control.multi{
     padding: 0;
     border: none;
   }
+  

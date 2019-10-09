@@ -79,7 +79,7 @@
         -->
 
 </section>
-<hr />
+<hr class="primary-line" />
 <section *ngFor="let expense of expenses">
     <div class="media">
         <div class="media-left">
@@ -90,10 +90,9 @@
         </div>
         <div class="media-body">
             <h4 class="media-heading my-0">{{expense.name}}
-                <span class="amount badge badge-pill badge-info">&#107;&#114; {{expense.amount}}</span>
+                <span class="amount badge badge-pill badge-primary">&#107;&#114; {{expense.amount}}</span>
             </h4>
-
         </div>
     </div>
-    <hr />
+    <hr class="primary-line" />
 </section>
