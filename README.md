@@ -1,17 +1,17 @@
 # Split the bill
 
-Sample experimental features of Split the bill app:
+Features of Split the bill app:
 
-1. It can fetch asset list dynamically from db and show on page.
-2. It shows individual interfaces list w.r.t devices.
-3. It can Add Assets to list.
-4. Show No. of Interfaces found in the Hostname (Device).
-5. COOL FEATURE: App automatically identifies Hostname(Device) and add interface to interfaces list with respective to Device, so no need to specify city when adding an interface.
-6. The app will work perfectly fine and add hotels even if new devices get added in db.
-7. In Add Interfaces only required validation with IP Address is added for demonstration purpose only.
-8. Hostname/Device add functionality.
-9. Ability to edit and delete assets/interfaces functionality.
-10. Error on alerts if any of the service failed to call.
+1. It can fetch user, expense, settle up list dynamically from mock json server and show on page.
+2. It shows User/Person, Expense, Settle up list.
+3. It can Add User/Person to list.
+4. Show No. Debts found in the name of Person (User).
+5. It fetches Settle up list statically as no actual DB used in application.
+6. Works for Desktop, Tablet and Mobile.
+7. It uses mobile first approach in UI Design.
+8. It uses facade design pattern.
+9. It has global error handling with individual component level error handling.
+10. App is based on modular architecture and lazy load each page.
 
 ## For Server Installation
 
