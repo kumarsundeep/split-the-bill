@@ -23,7 +23,8 @@
       "paidby": "john",
       "amount": "500",
       "oweby": [
-        "jane"
+        "jane",
+        "john"
       ],
       "id": 1
     },
@@ -38,12 +39,38 @@
       "id": 2
     }
   ],
-  "settleUp": {
-    "jane": [
-      {
-        "to": "john",
-        "amount": 350
-      }
-    ]
-  }
+  "settleup": [
+    {
+      "name": "john",
+      "id": 1,
+      "payto": []
+    },
+    {
+      "name": "jane",
+      "id": 2,
+      "payto": [
+        {
+          "to": "john",
+          "amount": 350,
+          "id": 1
+        }
+      ]
+    },
+    {
+      "name": "wolowitz",
+      "id": 3,
+      "payto": [
+        {
+          "to": "john",
+          "amount": 100,
+          "id": 1
+        }
+      ]
+    },
+    {
+      "name": "tim parker",
+      "id": 4,
+      "payto": []
+    }
+  ]
 }

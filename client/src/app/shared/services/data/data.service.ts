@@ -32,6 +32,10 @@ export class DataService {
     const url = `expenses`;
     return this.restService.postService(url, data, this.apiTypes.app);
   }
+  getSettleUps() {
+    const url = appConfig.appUrl + `settleup`;
+    return this.restService.getService(url, this.apiTypes.app);
+  }
   // getSampleData(params) {
   //   const url = `/sample/data`;
   //   return this.restService.postService(url, params, this.apiTypes.app);

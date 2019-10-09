@@ -21,6 +21,10 @@ const routes: Routes = [
       {
         path: 'expenses',
         loadChildren: './modules/expenses/expenses.module#ExpensesModule'
+      },
+      {
+        path: 'settleup',
+        loadChildren: './modules/settleup/settleup.module#SettleupModule'
       }
     ]
   }

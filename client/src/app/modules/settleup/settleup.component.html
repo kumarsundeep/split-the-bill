@@ -1,0 +1,52 @@
+<section>
+    <h2>Settle Up View</h2>
+    <form class="form">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="settleup" class="mb-0">Select Person</label>
+                    <div id="settleup" class="value-container">
+                        <select class="form-control" (change)="showSettleUps($event)">
+                            <option value="">Please Select</option>
+                            <option *ngFor="let user of all_users" [value]="user.name">
+                                {{user.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</section>
+<hr />
+<section *ngIf="show_list == true; else showBlock">
+    <h3><span class="text-capitalize">{{user_name}}</span> owes debt for:</h3>
+    <div *ngIf="no_debt == true; else showPayTo;">
+        <h5 class="text-muted">No Dues Found.</h5>
+    </div>
+    <ng-template #showPayTo>
+        <div *ngFor="let details of payto_details">
+            <div class="media">
+                <div class="media-left">
+                    <h4 class="my-0 pr-2">
+                        {{details.id}}.
+                    </h4>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading my-0">{{details.to}}
+                        <span class="amount badge badge-pill badge-info">&#107;&#114; {{details.amount}}</span>
+                    </h4>
+
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+
+    <hr />
+</section>
+<ng-template #showBlock>
+    <h3 class="text-center">No Person selected...</h3>
+</ng-template>
