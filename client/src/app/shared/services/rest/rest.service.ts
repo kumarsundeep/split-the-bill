@@ -142,11 +142,12 @@ export class RestService {
   }
 
   // Update partial
-  public patchService(url: string, param: any): Observable<any> {
-    const body = JSON.stringify(param);
+  public patchService(url: string, param: any, isAuth?: string): Observable<any> {
+    const body = param;
+    const _url = isAuth === this.apiTypes.auth ? appConfig.appAuthUrl + url : appConfig.appUrl + url;
     // show loader
     return this.http
-      .patch(appConfig.appUrl + url, body)
+      .patch(appConfig.appUrl + _url, body)
       .pipe(
         map(this.fromResponse),
         catchError(this.catchServerError),
@@ -155,8 +156,6 @@ export class RestService {
         })
       );
   }
-
-
 
 
   // Data from Response

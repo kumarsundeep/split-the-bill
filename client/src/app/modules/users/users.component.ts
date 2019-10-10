@@ -63,7 +63,23 @@ export class UsersComponent implements OnInit {
             Object.keys(this.addUserForm.controls).forEach(key => {
               this.addUserForm.get(key).setErrors(null);
             });
+
+            let settleup_param = {
+              "name": params.name,
+              "payto": []
+            }
+            this.dataService.addSettleUp(settleup_param).subscribe(
+              resp => {
+                //this.alertService.openModal('Record added successfully', 'Success')
+              },
+              error => {
+                // Show Error
+                console.log('App service error handler: ' + error);
+              });
+
           });
+
+
       }
 
     }

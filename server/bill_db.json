@@ -51,12 +51,11 @@
   "settleup": [
     {
       "name": "john",
-      "id": 1,
-      "payto": []
+      "payto": [],
+      "id": 1
     },
     {
       "name": "jane",
-      "id": 2,
       "payto": [
         {
           "to": "john",
@@ -68,23 +67,24 @@
           "amount": 100,
           "id": 2
         }
-      ]
+      ],
+      "id": 2
     },
     {
       "name": "wolowitz",
-      "id": 3,
       "payto": [
         {
           "to": "john",
           "amount": 100,
           "id": 1
         }
-      ]
+      ],
+      "id": 3
     },
     {
       "name": "tim parker",
-      "id": 4,
-      "payto": []
+      "payto": [],
+      "id": 4
     }
   ]
 }

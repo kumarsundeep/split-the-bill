@@ -36,15 +36,14 @@ export class DataService {
     const url = appConfig.appUrl + `settleup`;
     return this.restService.getService(url, this.apiTypes.app);
   }
-  // getSampleData(params) {
-  //   const url = `/sample/data`;
-  //   return this.restService.postService(url, params, this.apiTypes.app);
-  // }
-  // registerUser(data: any): Observable<any> {
-  //   return this.restService.postService(appConfig.resgisterUrl, data, this.apiTypes.app);
-  // }
-
-
+  addSettleUp(data: any) {
+    const url = `settleup`;
+    return this.restService.postService(url, data, this.apiTypes.app);
+  }
+  updateSettleUp(data: any) {
+    const url = `settleup`;
+    return this.restService.patchService(url, data, this.apiTypes.app);
+  }
 }
 
 
