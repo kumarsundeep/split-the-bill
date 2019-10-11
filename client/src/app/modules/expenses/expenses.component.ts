@@ -16,6 +16,7 @@ export class ExpensesComponent implements OnInit {
   public all_users_name: any;
   public addExpenseForm: FormGroup;
   public submitted: boolean = false;
+  public settleups: any;
   //multiselect
   private value: any = [];
   private _disabledV: string = '0';
@@ -33,6 +34,7 @@ export class ExpensesComponent implements OnInit {
       paidby: [null, Validators.required],
       oweby: [{ value: null, disabled: true }]
     });
+    this.getSettleUp();
   }
   // convenience getter for easy access to form fields
   get formFields() { return this.addExpenseForm.controls; }
@@ -58,9 +60,6 @@ export class ExpensesComponent implements OnInit {
   }
   addExpense(formValue) {
     this.submitted = true;
-
-
-
     // stop here if form is invalid
     if (this.addExpenseForm.invalid) {
       return;
@@ -99,12 +98,89 @@ export class ExpensesComponent implements OnInit {
             Object.keys(this.addExpenseForm.controls).forEach(key => {
               this.addExpenseForm.get(key).setErrors(null);
             });
+            //settleup
+            for (let index = 0; index < owebyValue.length; index++) {
+              const user_name = owebyValue[index];
+              console.log('user_name ' + user_name);
+              let settleupList = this.settleups.filter(item => item.name === user_name);
+              console.log('settleupList ' + JSON.stringify(settleupList));
+              const payto_details = settleupList[0].payto;
+              let pay_obj = {};
+              if (payto_details.length > 0) {
+                let pay_to_obj = payto_details.filter(item => item.to === params.paidby);
+                if (pay_to_obj.length > 0) {
+                  const cal_amount = Number(params.amount / owebyValue.length);
+                  payto_details[0].amount = Number(payto_details[0].amount) + cal_amount;
+                  console.log('payto_details.amount ' + JSON.stringify(payto_details));
+                }
+                else {
+                  let paytoId = payto_details[payto_details.length - 1].id + Number(1);
+                  const cal_amount = Number(params.amount / owebyValue.length);
+                  pay_obj = {
+                    "to": params.paidby,
+                    "amount": cal_amount,
+                    "id": paytoId
+                  }
+                  payto_details.push(pay_obj);
+                  console.log('payto_details ' + JSON.stringify(payto_details));
+                }
+
+
+
+
+
+                // let payto_obj = payto_details.filter(item => item.to === params.paidby);
+                // if (payto_obj == null || payto_obj == undefined) {
+                //   let paytoId = payto_details[payto_details.length - 1].id + Number(1);
+                // }
+                // else {
+                //   let cal_amount = Number(params.amount / owebyValue.length);
+                //   payto_obj.amount = Number(payto_obj.amount) + cal_amount;
+                // }
+
+
+              }
+              else { }
+
+              // // let update_settleup_param={             
+              // //               "name": "tim parker",
+              // //               "payto": []              
+              // //           }
+
+              // //           this.dataService.updateSettleUp(update_settleup_param).subscribe(
+              // //             resp => {
+              // //               //console.log('Record added successfully')
+              // //             },
+              // //             error => {
+              // //               // Show Error
+              // //               console.log('App service error handler: ' + JSON.stringify(error));
+              // //             });
+
+
+
+            }
+
+
+
+
           });
       }
 
     }
 
 
+
+  }
+  getSettleUp() {
+    this.dataService.getSettleUps().subscribe(
+      resp => {
+        this.settleups = resp;
+        // let paytoList = this.settleups.filter(item => item.name === this.user_name);
+        // this.payto_details = paytoList[0].payto;
+        // if (this.payto_details.length > 0) this.no_debt = false;
+        // else this.no_debt = true;
+      }
+    );
   }
   //multiselect 
 
