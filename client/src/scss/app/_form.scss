@@ -11,6 +11,9 @@
     border-radius: 0;
     font-size: $font-size;
 }
+.btn-primary{
+    color: $color-white;
+}
 select{
     text-transform: capitalize;
     option:hover{

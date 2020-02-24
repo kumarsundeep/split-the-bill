@@ -14,11 +14,16 @@ import { LayoutModule } from './shared/layout/layout.module';
 
 import { AppComponent } from './app.component';
 import { AlertComponent } from './shared/components/alert/alert.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { LoaderComponentComponent } from './shared/components/loader-component/loader-component.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlertComponent
+    AlertComponent,
+    LoaderComponentComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
