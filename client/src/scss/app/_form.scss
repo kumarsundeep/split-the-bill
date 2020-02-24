@@ -1,6 +1,7 @@
 .form-control{
     border-radius: 0;
     border-width: 2px;
+    font-size: $font-size;
 }
 .btn{
     min-width: 70px;
@@ -8,7 +9,7 @@
     text-transform: uppercase;
     font-weight: 500;
     border-radius: 0;
-    font-size: 14px;
+    font-size: $font-size;
 }
 select{
     text-transform: capitalize;
